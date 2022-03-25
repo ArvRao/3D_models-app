@@ -1,0 +1,8 @@
+[DONE] (access to .glb file) api with sendFile
+    - res.sendFile(path [, options] [, fn])
+    - Returns an object
+    
+
+React Routes(refer pokevite)
+By the end of tmrw, create threejs app with sending list of names api to frontend
+
