@@ -1,0 +1,10 @@
+[DONE] (access to .glb file) api with sendFile
+    - res.sendFile(path [, options] [, fn])
+    - Returns an object
+
+
+[DONE] React Routes(refer pokevite)
+
+[DONE] Convert glb -> gltf and generate JSX component
+[DONE] Add orbiter controls
+
