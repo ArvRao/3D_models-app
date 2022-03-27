@@ -2,11 +2,12 @@ const express = require('express')
 const router = express.Router()
 const path = require('path')
 
-//* For testing
+//* test route
 router.get('/', (req, res) => {
   res.status(200).send('custom route')
 })
 
+//* Index file
 router.get('/index', (req, res) => {
   res.sendFile(path.join(__dirname, '../', '/public/index.html'))
 })
@@ -17,10 +18,20 @@ router.get('/models/p1', (req, res) => {
 })
 
 router.get('/modelsList', (req, res) => {
-  res.status(200).json({
-    success: true,
-    'List of models': ['p1', 'p2', 'p3', 'p4'],
-  })
+  res.json([
+    {
+      "id": "1",
+      'modelName': 'p1.glb'
+    },
+    {
+      "id": "2",
+      'modelName': 'p2.glb'
+    },
+    {
+      "id": "3",
+      'modelName': 'p3.glb',
+    },
+  ])
 })
 
 module.exports = router
