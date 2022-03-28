@@ -11,6 +11,8 @@ import P1_Details from './models/P1_Details'
 import P2_Details from './models/P2_Details'
 import P3_Details from './models/P3_Details'
 import P4_Details from './models/P4_Details'
+import P6_Details from './models/P6_Details'
+import P7_Details from './models/P7_Details'
 // import {
 //   BrowserRouter as Router,
 //   Link
@@ -45,6 +47,8 @@ function App() {
         <Route exact path="/p2" element={<P2_Details />} />
         <Route exact path="/p3" element={<P3_Details />} />
         <Route exact path="/p4" element={<P4_Details />} />
+        <Route exact path="/p5" element={<P6_Details />} />
+        <Route exact path="/p6" element={<P7_Details />} />
       </Routes>
     </div>
 

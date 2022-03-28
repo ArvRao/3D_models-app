@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { React, Suspense, useState } from 'react'
 import { Canvas } from 'react-three-fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import P6 from '../assets/P6'
+import P7 from '../assets/P7'
 
 import { OrbitControls } from "@react-three/drei"
 const P1_Detail = () => {
@@ -14,7 +14,7 @@ const P1_Detail = () => {
                 <ambientLight intensity={1} />
                 <spotLight intensity={0.5} angle={0.1} penumbra={1} position={[10, 15, 10]} castShadow />
                 <Suspense fallback={null}>
-                    <P6 />
+                    <P7 />
                 </Suspense>
             </Canvas>
 
