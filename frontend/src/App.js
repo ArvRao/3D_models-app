@@ -9,6 +9,8 @@ import Content from './components/Content'
 import Loading from '../src/components/Loading'
 import P1_Details from './models/P1_Details'
 import P2_Details from './models/P2_Details'
+import P3_Details from './models/P3_Details'
+import P4_Details from './models/P4_Details'
 // import {
 //   BrowserRouter as Router,
 //   Link
@@ -41,6 +43,8 @@ function App() {
         <Route exact path="/footer" element={<Footer />} />
         <Route exact path="/p1" element={<P1_Details />} />
         <Route exact path="/p2" element={<P2_Details />} />
+        <Route exact path="/p3" element={<P3_Details />} />
+        <Route exact path="/p4" element={<P4_Details />} />
       </Routes>
     </div>
 

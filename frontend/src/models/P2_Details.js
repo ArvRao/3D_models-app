@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 import { React, Suspense, useState } from 'react'
 import { Canvas } from 'react-three-fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
-import P2 from './P2'
+import P2 from '../assets/P2'
 import { OrbitControls } from "@react-three/drei"
 const P1_Detail = () => {
     return (
