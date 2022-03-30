@@ -24,7 +24,13 @@ const Content = () => {
                 <br />
                 <p>p6.glb <Link className="underline text-blue-400" to="/p6">View</Link> </p>
                 <br />
-                <Link className="underline bg-pink-300" to="/about">Go back</Link> <br />
+                <p>p7.glb <Link className="underline text-blue-400" to="/p7">View</Link> </p>
+                <br />
+                <p>p8.glb <Link className="underline text-blue-400" to="/p8">View</Link> </p>
+
+                <Link className="underline bg-blue-800" to="/about">Go back</Link> <br /> <br />
+            <footer id="footer">Copyright &copy; 2022</footer>
+
             </div>
         </div >
     )

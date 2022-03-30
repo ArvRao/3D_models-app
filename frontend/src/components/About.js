@@ -8,7 +8,6 @@ const About = () => {
             <br />
             <div>
                 <Link to="/">Go back</Link> <br />
-                <Link to="/footer">Footer section</Link> <br />
             </div>
         </div>
     )

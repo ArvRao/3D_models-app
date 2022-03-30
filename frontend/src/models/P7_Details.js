@@ -8,7 +8,7 @@ import { OrbitControls } from "@react-three/drei"
 const P1_Detail = () => {
     return (
         <div style={{ height: "500px", width: "600px" }}>
-            <Link className="underline bg-pink-300" to="/contents">Go back</Link> <br />
+            <Link className="bg-green-800 underline" to="/contents">Go back</Link> <br />
             <Canvas style={{ background: "#cfdae3" }}>
                 <OrbitControls enableZoom={false} />
                 <ambientLight intensity={1} />
@@ -17,6 +17,8 @@ const P1_Detail = () => {
                     <P7 />
                 </Suspense>
             </Canvas>
+
+            <footer id="footer">Copyright &copy; 2022</footer>
 
         </div>
     )
