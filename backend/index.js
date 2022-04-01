@@ -11,6 +11,7 @@ app.use(cors())
 const PORT = 5000 // Port number for backend server
 const modelRoutes = require('./routes/models.routes')
 
+
 app.use('/api/v1', cors(), modelRoutes)
 
 // ACCESS TO ALL MODELS THROUGH API's

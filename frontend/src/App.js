@@ -1,12 +1,8 @@
-import logo from './logo.svg'
 import React, { useState, useEffect } from 'react';
-import axios from 'axios'
 import './App.css'
 import Header from './components/Header'
 import About from './components/About'
-import Footer from './components/Footer'
 import Content from './components/Content'
-import Loading from '../src/components/Loading'
 import P1_Details from './models/P1_Details'
 import P2_Details from './models/P2_Details'
 import P3_Details from './models/P3_Details'
@@ -16,11 +12,13 @@ import P7_Details from './models/P7_Details'
 
 import P8_Details from './models/P8_Details'
 import P9_Details from './models/P9_Details'
+import P12_Details from './models/P12_Details'
+import P13_Details from './models/P13_Details'
 // import {
 //   BrowserRouter as Router,
 //   Link
 // } from "react-router-dom";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   const [modelList, setModelList] = useState([])
@@ -53,6 +51,8 @@ function App() {
         <Route exact path="/p6" element={<P7_Details />} />
         <Route exact path="/p7" element={<P8_Details />} />
         <Route exact path="/p8" element={<P9_Details />} />
+        <Route exact path="/p12" element={<P12_Details />} />
+        <Route exact path="/p13" element={<P13_Details />} />
       </Routes>
     </div>
 
