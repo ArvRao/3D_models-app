@@ -10,7 +10,7 @@ export default function Model({ ...props }) {
   const { nodes, materials } = useGLTF('/P7.gltf')
   return (
     <group ref={group} {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 0.6]} scale={[1.0, 1.4, 1.6]}>
+      <group rotation={[-Math.PI / 2, 0, 0.7]} scale={[1.0, 1.4, 1.6]}>
         <mesh geometry={nodes.mesh_45_0.geometry} material={nodes.mesh_45_0.material} />
         <mesh geometry={nodes.mesh_45_2.geometry} material={nodes.mesh_45_2.material} />
         <mesh geometry={nodes.mesh_45_7.geometry} material={nodes.mesh_45_7.material} />
