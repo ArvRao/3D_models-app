@@ -11,12 +11,6 @@ const Header = () => {
         <div className="text-white text-4xl text-justify font-semibold tracking-wide font-serif">
           <h1>3D MODELS APPLICATION</h1>
         </div>
-
-        <div className="text-white text-xl font-light">
-          {/* <Link to="/about">About</Link> */}
-          {/* <a id="App">Upload</a> */}
-          <a href="https://google.com" target="_blank">Upload</a>
-        </div>
       </div>
     </header>
   )
