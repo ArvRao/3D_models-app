@@ -17,6 +17,7 @@ router.get('/models/p1', (req, res) => {
   res.status(200).sendFile(path.join(__dirname, '../', '/public/models/P1.glb'))
 })
 
+
 router.get('/modelsList', (req, res) => {
   res.json([
     {
