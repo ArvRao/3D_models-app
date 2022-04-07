@@ -13,3 +13,7 @@ An application that lets you view and upload 3D models in real time. Built using
 * <strong>Links:</strong>
 *  http://localhost:5000
 *  http://localhost:3000
+
+## Deployment
+* Frontend - Netlify (https://fabrik-assignment.netlify.app/)
+* Backend - Heroku (https://fabrik--assignment.herokuapp.com/)
