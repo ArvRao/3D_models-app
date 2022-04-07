@@ -1,13 +1,14 @@
 const express = require('express')
 
 const app = express()
+const fileupload = require("express-fileupload");
 const path = require('path')
 const cors = require('cors')
 const multer = require('multer')
 const PORT = 5000 // Port number for backend server
 
-app.use(express.static(__dirname + '/public'))
 app.use(express.json())
+
 app.use(cors())
 
 const storage = multer.diskStorage({
@@ -15,21 +16,24 @@ const storage = multer.diskStorage({
     cb(null, 'public/models')
   },
   filename: (req, file, cb) => {
-    cb(null, Date.now() + '-', + file.originalname)
-  }
+    cb(null, file.originalname)
+  },
 })
 
-const upload = multer({storage}).single('file');
+const upload = multer({ storage: storage })
 
-app.post('/upload', (req, res) => {
-  upload(req, res, (err) => {
-    if (err) {
-      return res.status(500).json(err)
-    }
 
-    return res.status(200).send(req.file)
-  })
+app.post('/file', upload.single('file'), function (req, res) {
+  res.json({})
 })
+
+// app.get("/upload", (req, res) => {
+//   const newpath = __dirname + "/models/";
+//   // const file = req.files.file;
+//   // const filename = file.name;
+// res.send(req)
+// });
+
 
 
 const modelRoutes = require('./routes/models.routes')
@@ -43,16 +47,6 @@ app.get('/models/p1', cors(), (req, res) => {
   res.status(200).sendFile(path.join(__dirname + '/public/models/P1.glb'))
 })
 
-
-
-// app.get('/api/v1/:id', (req, res) => {
-//   const models = req.params.id
-
-//   res.json({
-//     message: 'success',
-//     path: '/backend/public/models/' + models,
-//   })
-// })
 
 app.listen(PORT, (req, res) => {
   console.log(`Server running at port ${PORT}`)
