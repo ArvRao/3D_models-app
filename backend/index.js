@@ -14,7 +14,7 @@ app.use(cors())
 
 
 // setup the logger
-app.use(morgan('combined', { stream: accessLogStream }))
+// app.use(morgan('combined', { stream: accessLogStream }))
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -26,6 +26,10 @@ const storage = multer.diskStorage({
 })
 
 const upload = multer({ storage: storage })
+
+app.get('/', (req, res) => {
+  res.send('Test the API')
+})
 
 
 app.post('/file', upload.single('file'), function (req, res) {
