@@ -32,15 +32,14 @@ const Upload = () => {
 
     return (
         <div className="pt-6">
-            <h1 className="text-lg font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 font-serif">Upload a model</h1> <br />
-            {/* <button className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full w-36 border-2 py-2" onClick={uploadModel}>Click here</button> */}
+            <h1 className="text-lg font-semibold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 font-serif rounded-full">Upload a model</h1> <br />
             <hr />
             <form onSubmit={handleSubmit}>
-                <input type='file' name='file' onChange={handleFileChange}></input>
-                <button className="bg-blue-500" type='submit'>Submit</button>
+                <input type='file' name='file' onChange={handleFileChange}></input> <br />
+                <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type='submit'>Submit</button>
     
 </form>
-            {status && <h4>{status}</h4>}
+            <strong>Status:</strong> {status}
 
         </div>
     )
