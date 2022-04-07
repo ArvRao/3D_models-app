@@ -1,7 +1,4 @@
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
-import App from '../App'
-import React, {useState} from 'react';
-import axios from 'axios';
+import React, {useState} from 'react';;
 
 const Upload = () => {
 

@@ -1,6 +1,7 @@
 const express = require('express')
 
 const app = express()
+const morgan = require('morgan')
 const fileupload = require("express-fileupload");
 const path = require('path')
 const cors = require('cors')
@@ -10,6 +11,10 @@ const PORT = 5000 // Port number for backend server
 app.use(express.json())
 
 app.use(cors())
+
+
+// setup the logger
+app.use(morgan('combined', { stream: accessLogStream }))
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
