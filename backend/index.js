@@ -6,7 +6,8 @@ const fileupload = require("express-fileupload");
 const path = require('path')
 const cors = require('cors')
 const multer = require('multer')
-const PORT = 5000 // Port number for backend server
+// Port number for backend server
+const port = process.env.PORT || 5000;
 
 app.use(express.json())
 
@@ -36,14 +37,6 @@ app.post('/file', upload.single('file'), function (req, res) {
   res.json({})
 })
 
-// app.get("/upload", (req, res) => {
-//   const newpath = __dirname + "/models/";
-//   // const file = req.files.file;
-//   // const filename = file.name;
-// res.send(req)
-// });
-
-
 
 const modelRoutes = require('./routes/models.routes')
 
@@ -57,6 +50,5 @@ app.get('/models/p1', cors(), (req, res) => {
 })
 
 
-app.listen(PORT, (req, res) => {
-  console.log(`Server running at port ${PORT}`)
-})
+
+app.listen(port, () => console.log(`Server is listening on port: ${port} `));
